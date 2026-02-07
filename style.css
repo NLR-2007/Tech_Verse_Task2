@@ -55,9 +55,8 @@ h1 {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block; /* Ensures it takes full width for proper text alignment */
+    /* Removed the 'left' and 'transform' properties which were causing the offset */
 }
 
 .section-title::after {
@@ -66,7 +65,7 @@ h1 {
     width: 60px;
     height: 3px;
     background: var(--secondary);
-    margin: 10px auto 0;
+    margin: 10px auto 0; /* 'auto' here handles the horizontal centering of the line */
 }
 
 /* --- 3. NAVIGATION --- */
